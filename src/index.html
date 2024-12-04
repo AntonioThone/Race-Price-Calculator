@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Preço de Táxi</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+    <div class="form-container">
+        <form id="taxi-form">
+            <label for="current-location">Localização Atual</label>
+            <input type="text" id="current-location" name="current-location" placeholder="Digite a localização" oninput="fetchSuggestions('current')" autocomplete="off">
+            <div id="suggestions-current" class="suggestions"></div>
+            
+            <label for="destination">Destino</label>
+            <input type="text" id="destination" name="destination" placeholder="Digite o destino" oninput="fetchSuggestions('destination')" autocomplete="off">
+            <div id="suggestions-destination" class="suggestions"></div>
+
+            <label for="price">Preço da Corrida (AKZ)</label>
+            <input type="text" id="price" name="price" readonly>
+        </form>
+    </div>
+    <div id="map" style="height: 400px; display: none;"></div>
+    
+    <script src="script.js"></script> 
+</body>
+</html>
+
+
